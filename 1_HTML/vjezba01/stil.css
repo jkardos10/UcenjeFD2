@@ -1,0 +1,17 @@
+body{
+    background-color: antiquewhite;
+}
+
+h1{
+    color: #ff00ff;
+    text-align: center;
+}
+
+.naslov{
+    font-family: sans-serif;
+}
+
+#sadrzaj p{
+    line-height: 0.9rem;
+    color: blue;
+}

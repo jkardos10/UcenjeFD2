@@ -1,0 +1,9 @@
+:root{
+    --primarna-boja: #2C3E50;
+    --pozadina: #ecf0f1;
+}
+
+body{
+    background-color: var(--pozadina);
+    background-image: radial-gradient();
+}
