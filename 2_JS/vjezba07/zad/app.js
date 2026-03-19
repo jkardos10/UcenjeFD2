@@ -9,6 +9,58 @@ document.getElementById('izvedi').addEventListener('click', () => {
   switch (zadatak) {
     case '1':
       // rješavanje 1. zadatak
+      //1. Za uneseni cijeli broj u polje A veći od 2 i manji od 10M ispiši da li je prim (prosti) broj ili ne.
+
+
+      let a1 = Number(a);
+      
+
+      if(!a1){
+        rezultat.innerHTML = "Nisi unio broj!";
+        return;
+      }
+
+      if(a1 < 2 || a1 > 10000000){
+        rezultat.innerHTML = "Broj nije u zadanom intervalu, ponovi unos.";
+        return;
+      }
+      //console.log(a1);
+
+      /*
+      
+      6 % 2 = 0
+      6 % 3 = 0
+      6 % 4 = 2
+      6 % 5 = 1
+
+      6 nije prim broj
+
+      7 % 2 = 1
+      7 % 3 = 1
+      7 % 4 = 3
+      7 % 5 = 2
+      7 % 6 = 1
+
+      7 je prim broj
+
+      */ 
+
+      let prim = true;
+
+      for (let i = 2; i < a1; i++){
+        console.log(a1, '%', i, '=', a1 % i);
+        if (a1 % i === 0){
+          prim = false;
+          break;
+        }
+      }
+
+      if(prim){
+        rezultat.innerHTML = `${a1} je prim broj`;
+      }else{
+        rezultat.innerHTML = `${a1} nije prim broj`;
+      }
+
 
       // kraj rješavanje 1. zadatak
     break;
